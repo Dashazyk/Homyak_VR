@@ -1,0 +1,33 @@
+{
+    "name": "MoveForward",
+    "maps": [
+        {
+            "name": "MoveForwardKBD",
+            "id": "4c0b219b-be3b-4c83-97c6-57517b226b36",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "cb5ab129-2e89-41e1-b528-efb9b0633125",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ddd075b0-7ec7-4095-b313-ac98805c3895",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

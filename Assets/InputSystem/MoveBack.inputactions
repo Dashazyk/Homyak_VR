@@ -1,0 +1,33 @@
+{
+    "name": "MoveBack",
+    "maps": [
+        {
+            "name": "MoveBackKBD",
+            "id": "df688c8f-a8f9-449c-9d9b-c894765bfa05",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "83101a6c-d2aa-44fb-96f7-102aef39b9da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "382fc03f-d9c0-48e3-ad53-6cf58a1c3b5e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

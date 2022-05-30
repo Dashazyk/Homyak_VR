@@ -1,0 +1,71 @@
+{
+    "name": "ShootComponent",
+    "maps": [
+        {
+            "name": "PlayerKBD",
+            "id": "45ac153d-fd06-4b68-887f-458f20770e7c",
+            "actions": [
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "52cc72c7-8b28-4260-8ada-09acb98e5645",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveForw",
+                    "type": "Button",
+                    "id": "5d5302da-737d-4140-9593-0ea0198f70be",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveBack",
+                    "type": "Button",
+                    "id": "5f3457a7-f2f3-4ea6-8f29-2f84316eb82f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6a0eed20-1c04-40c6-aeb3-8300d9535b8d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11de32a0-f353-49e5-a285-d1047534fb41",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveForw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4b683168-dba2-443e-acfb-8d5acd79c028",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveBack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
