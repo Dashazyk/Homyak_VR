@@ -31,20 +31,11 @@ public class ExplosionBehav : MonoBehaviour
         Debug.Log(collision.gameObject.name);
     }
 
-    // void OnCollisionEnter(Collision collision) {
     void OnTriggerEnter(Collider collision) {
-        // Debug.Log("trigger");
-        // Debug.Log(collision.gameObject.name);
-        // if (collision.gameObject.name == "building") {
-            // owner.GetComponent<playerScript>().killCount += 1;
-            // Debug.Log(owner.GetComponent<playerScript>().killCount);
-            // Destroy(collision.gameObject);
-
         var gds = collision.gameObject.GetComponent<GetDamagedBehaviour>();
         if (gds != null && owner != null) {
-            // owner.GetComponent<playerScript>().killCount += 
             gds.GetDamaged(owner);
         }
-        // }
+
     }
 }

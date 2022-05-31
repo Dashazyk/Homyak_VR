@@ -28,11 +28,6 @@ public class GunBehav : MonoBehaviour
                     Random.Range(-1, 1),
                     Random.Range(-1, 1)
                 );
-            // var trans = player.transform;
-            // trans.position += random_miss;
-
-            // transform.LookAt(trans/*, Vector3.left*/);
-            
 
             Vector3 relativePos   = player.transform.position - transform.position + random_miss;
             Quaternion toRotation = Quaternion.LookRotation(relativePos);
@@ -52,8 +47,6 @@ public class GunBehav : MonoBehaviour
                         transform.position + shot_direction * 10, 
                         transform.rotation
                     );
-                    // bullet_instance.GetComponent<Rigidbody>().velocity  = shot_direction * speed_limit * 3;
-                    // bullet_instance.GetComponent<bullet_script>().owner = gameObject;
 
                     bullet_instance.GetComponent<bullet_script>().Setup(shot_direction * 25 * 3, gameObject);
                 }

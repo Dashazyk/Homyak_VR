@@ -20,8 +20,6 @@ public class ChunkScript : MonoBehaviour
         int   grid_side = 16;
         float buld_size = chunk_size / grid_side;
 
-        // Debug.Log("generating chunk at " + chunk_pos.ToString());
-
         var floor_prefab = Resources.Load("Chunk/Floor") as GameObject;
         var build_prefab = Resources.Load("Building/TargetBuildingPrefab") as GameObject;
         var engun_prefab = Resources.Load("Gun/gunBase") as GameObject;
@@ -29,31 +27,10 @@ public class ChunkScript : MonoBehaviour
         var floor = GameObject.Instantiate(
             floor_prefab, 
             new Vector3(0, 0, 0),
-            // Quaternion.Euler(1, 1, 1)
             transform.rotation
         );
         floor.transform.SetParent(transform, false);
         floor.transform.localScale = new Vector3(chunk_size, 1, chunk_size);
-
-        /* if (chunk_pos.magnitude > 3) {
-        //     for (int dx = 0; dx < grid_size; ++dx)
-        //         for (int dz = 0; dz < grid_size; ++dz) {
-        //             var diff = new Vector3(dx, 0, dz);
-        //             var building = GameObject.CreatePrimitive(PrimitiveType.Cube);
-
-        //             building.name = "building";
-        //             building.transform.SetParent(transform, false);
-
-        //             // building.transform.position = chunk_pos * chunk_size + new Vector3(0, 1, 0);
-        //             building.transform.position += diff * chunk_size;
-        //             building.transform.localScale = new Vector3(
-        //                 1.0f * buld_size / chunk_size, 
-        //                 bheight * buld_size * 2, 
-        //                 1.0f * buld_size / chunk_size
-        //             );
-        //     }
-        // }
-        */
 
         int x = (int)chunk_pos.x;
         int z = (int)chunk_pos.z;
@@ -72,21 +49,13 @@ public class ChunkScript : MonoBehaviour
                             var building = GameObject.Instantiate(
                                 build_prefab, 
                                 new Vector3(0, 0, 0),
-                                // Quaternion.Euler(1, 1, 1)
+                                
                                 transform.rotation
                             );
-                            // building.GetComponent<Material>().SetTextureScale("btext1", new Vector2(4, bheight));
 
                             building.name = "building";
                             building.transform.SetParent(transform, false);
 
-                            // if ( (((dx * dz) % (grid_side - 1)) == 0) && ((dx + dz) % 2 == 0) ) {
-                            //     Light lightComp = building.AddComponent<Light>();
-                            // }
-                            // var coll = building.GetComponent<Collider>();
-                            // coll.isTrigger = true;
-
-                            // building.transform.position = chunk_pos * chunk_size + new Vector3(0, /*floor_height +*/ 1, 0) /*+ new Vector3(i, 0, j) * buld_size*/;
                             building.transform.localPosition = diff * buld_size;
                             building.transform.localScale = new Vector3(
                                 0.9f * buld_size, 
@@ -97,17 +66,16 @@ public class ChunkScript : MonoBehaviour
                         }
                 }
             }
-            // else if ((chunk_pos.magnitude % 2) == 0) {
+            
             else {
                 var gun = GameObject.Instantiate(
                     engun_prefab, 
                     new Vector3(0, 0, 0),
-                    // Quaternion.Euler(1, 1, 1)
+                    
                     transform.rotation
                 );
                 gun.transform.SetParent(transform, false);
                 gun.transform.localPosition += new Vector3(chunk_size / 2, 1, chunk_size / 2);
-                // gun.transform.localScale = new Vector3(chunk_size, 1, chunk_size);
                 gun.GetComponent<GetDamagedBehaviour>().SetStat(100, 50);
             }
         }

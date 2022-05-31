@@ -30,8 +30,6 @@ public class bullet_script : MonoBehaviour
     void Boom() {
         var explosion = GameObject.Instantiate(
                 Resources.Load("Explosion/ExplosionBall") as GameObject, 
-                // new Vector3(0, 0, 0),
-                // Quaternion.Euler(1, 1, 1)
                 transform.position,
                 transform.rotation
         );
@@ -42,9 +40,6 @@ public class bullet_script : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name != "Explosion(Clone)") {
-            
-
-            // Explosion.transform.SetParent(transform, false);
             if (canBoom)
                 Boom();
         }
