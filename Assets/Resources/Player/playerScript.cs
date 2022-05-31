@@ -9,7 +9,6 @@ public class playerScript : MonoBehaviour
     // Start is called before the first frame update
     Rigidbody tushka;
     private float  thrust      = 50f;
-    private bool   queued_shot = false;
     private bool[] do_move     = new bool[4]{false, false, false, false};
     private int    speed_limit = 25;
     public GameObject head ;

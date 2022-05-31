@@ -45,3 +45,18 @@ The following packages were updated:
   com.unity.xr.management from version 4.0.1 to 4.0.7
   com.unity.xr.oculus from version 1.8.1 to 1.10.0
   com.unity.xr.windowsmr from version 4.4.1 to 4.5.0
+
+=== Tue May 31 23:11:01 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 1.7.1 to 1.15.17
+  com.unity.ide.visualstudio from version 2.0.11 to 2.0.15
+  com.unity.ide.vscode from version 1.2.3 to 1.2.5
+  com.unity.render-pipelines.universal from version 10.6.0 to 10.9.0
+  com.unity.test-framework from version 1.1.27 to 1.1.31
+  com.unity.xr.oculus from version 1.10.0 to 1.12.0
+  com.unity.xr.openxr from version 1.2.8 to 1.4.1
+  com.unity.xr.windowsmr from version 4.5.0 to 4.6.3
